@@ -1,0 +1,17 @@
+func mergeAlternately(word1 string, word2 string) string {
+	maxLen := max(len(word1), len(word2))
+	i := 0
+	var res strings.Builder
+
+	for i < maxLen {
+		if i < len(word1) {
+			res.WriteByte(word1[i])
+		}
+		if i < len(word2) {
+			res.WriteByte(word2[i])
+		}
+		i++
+	}
+
+	return res.String()
+}
